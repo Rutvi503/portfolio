@@ -10,6 +10,7 @@ const skills = [
   "Git & GitHub",
   "REST APIs",
   "Figma"
+  ,"Agentic AI "
 ];
 
 export default function Skills() {
