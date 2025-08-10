@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --check .",
-    "ci-check": "npm run format && npm run lint"
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "ci-check": "npm run format:check && npm run lint"
   },
   "dependencies": {
     "next": "15.4.6",

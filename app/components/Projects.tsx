@@ -1,5 +1,3 @@
-
-
 const projects = [
   {
     title: "Attendance System Using Face Recognition",
@@ -11,8 +9,8 @@ const projects = [
       "FastAPI-powered APIs for high-performance facial recognition and seamless data handling.",
       "Secure user authentication, face enrollment, and device integration.",
       "Scalable architecture using PostgreSQL and AWS for large-scale operations.",
-      "Impact: Automated, accurate attendance tracking that reduces manual errors and administrative workload."
-    ]
+      "Impact: Automated, accurate attendance tracking that reduces manual errors and administrative workload.",
+    ],
   },
   {
     title: "Wedding App",
@@ -24,8 +22,8 @@ const projects = [
       "Photo/video gallery with upload, organization, and advanced media features (download, rotate, zoom, share, favorite).",
       "Secure RESTful APIs and user authentication.",
       "Deployed on AWS with Docker for scalability and reliability.",
-      "Impact: Intuitive, feature-rich platform that simplifies event and media management for users."
-    ]
+      "Impact: Intuitive, feature-rich platform that simplifies event and media management for users.",
+    ],
   },
   {
     title: "Scalable User Management & Data Processing System",
@@ -38,16 +36,18 @@ const projects = [
       "Dynamic data pipelines for ingestion, transformation, and real-time analytics.",
       "Basic ML models for classification and predictive analytics.",
       "Azure Cloud deployment with Functions, SQL DB, caching, and load balancing.",
-      "Impact: Robust, scalable, and secure solution for complex enterprise operations."
-    ]
-  }
+      "Impact: Robust, scalable, and secure solution for complex enterprise operations.",
+    ],
+  },
 ];
 
 export default function Projects() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-blue-700 text-center">Projects</h2>
+        <h2 className="text-3xl font-bold mb-8 text-blue-700 text-center">
+          Projects
+        </h2>
         <div className="grid md:grid-cols-1 gap-10">
           {projects.map((project) => (
             <div
@@ -57,13 +57,22 @@ export default function Projects() {
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl md:text-4xl">{project.icon}</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-blue-900">{project.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-900">
+                    {project.title}
+                  </h3>
                 </div>
-                <span className="text-xs text-gray-500 font-mono whitespace-nowrap">{project.date}</span>
+                <span className="text-xs text-gray-500 font-mono whitespace-nowrap">
+                  {project.date}
+                </span>
               </div>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.tech.map((tech) => (
-                  <span key={tech} className="bg-blue-200 text-blue-800 px-2 py-1 rounded text-xs font-mono shadow-sm">{tech}</span>
+                  <span
+                    key={tech}
+                    className="bg-blue-200 text-blue-800 px-2 py-1 rounded text-xs font-mono shadow-sm"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
               <ul className="list-disc list-inside text-gray-800 mb-2 space-y-1 text-sm md:text-base">

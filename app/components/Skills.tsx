@@ -1,4 +1,3 @@
-
 const skills = [
   "React.js",
   "Next.js",
@@ -9,8 +8,8 @@ const skills = [
   "UI/UX Design",
   "Git & GitHub",
   "REST APIs",
-  "Figma"
-  ,"Agentic AI "
+  "Figma",
+  "Agentic AI ",
 ];
 
 export default function Skills() {
