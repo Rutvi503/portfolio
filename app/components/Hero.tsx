@@ -1,4 +1,3 @@
-
 export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-b from-blue-50 to-white text-center py-16">
@@ -7,10 +6,16 @@ export default function Hero() {
         alt="Rutvi Rathod profile"
         className="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-white object-cover object-center"
       />
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Rutvi Rathod</h1>
-      <h2 className="text-xl md:text-2xl text-blue-700 font-semibold mb-4">Software Engineer & Frontend Developer</h2>
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+        Rutvi Rathod
+      </h1>
+      <h2 className="text-xl md:text-2xl text-blue-700 font-semibold mb-4">
+        Software Engineer & Frontend Developer
+      </h2>
       <p className="max-w-xl text-gray-600 text-lg md:text-xl mb-6">
-        Passionate about building beautiful, performant, and accessible web applications. Experienced in React, Next.js, and modern web technologies.
+        Passionate about building beautiful, performant, and accessible web
+        applications. Experienced in React, Next.js, and modern web
+        technologies.
       </p>
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-4">
         <a
