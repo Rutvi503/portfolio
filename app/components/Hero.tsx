@@ -1,18 +1,18 @@
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-b from-blue-50 to-white text-center py-16">
+    <section className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-b from-[#181e29] to-[#10141a] text-center py-16 text-blue-100">
       <img
         src="/rutu.jpg"
         alt="Rutvi Rathod profile"
-        className="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-white object-cover object-center"
+        className="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-[#232a3a] object-cover object-center"
       />
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+      <h1 className="text-4xl md:text-5xl font-bold text-blue-100 mb-2">
         Rutvi Rathod
       </h1>
-      <h2 className="text-xl md:text-2xl text-blue-700 font-semibold mb-4">
+      <h2 className="text-xl md:text-2xl text-blue-300 font-semibold mb-4">
         Software Engineer & Frontend Developer
       </h2>
-      <p className="max-w-xl text-gray-600 text-lg md:text-xl mb-6">
+      <p className="max-w-xl text-blue-200 text-lg md:text-xl mb-6">
         Passionate about building beautiful, performant, and accessible web
         applications. Experienced in React, Next.js, and modern web
         technologies.
@@ -21,7 +21,7 @@ export default function Hero() {
         <a
           href="/Rutvi Rathod_Resume.pdf"
           download
-          className="inline-block px-6 py-2 bg-blue-700 text-white rounded-full shadow hover:bg-blue-800 transition"
+          className="inline-block px-6 py-2 bg-blue-700 text-white rounded-full shadow hover:bg-blue-800 transition border border-blue-800"
         >
           Download Resume
         </a>
@@ -29,7 +29,7 @@ export default function Hero() {
           href="https://www.linkedin.com/in/rutvi-rathod/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-6 py-2 bg-white text-blue-700 border border-blue-700 rounded-full shadow hover:bg-blue-50 transition font-semibold"
+          className="inline-block px-6 py-2 bg-[#232a3a] text-blue-300 border border-blue-700 rounded-full shadow hover:bg-blue-900 transition font-semibold"
         >
           LinkedIn Profile
         </a>

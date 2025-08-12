@@ -43,39 +43,28 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-[#181e29] to-[#10141a] text-blue-100">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-blue-700 text-center">
-          Projects
-        </h2>
+        <h2 className="text-3xl font-bold mb-8 text-blue-300 text-center">Projects</h2>
         <div className="grid md:grid-cols-1 gap-10">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-[1.025] transition-transform border border-blue-200"
+              className="bg-gradient-to-br from-[#232a3a] to-[#181e29] rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-[1.025] transition-transform border border-blue-900"
             >
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl md:text-4xl">{project.icon}</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-blue-900">
-                    {project.title}
-                  </h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-100">{project.title}</h3>
                 </div>
-                <span className="text-xs text-gray-500 font-mono whitespace-nowrap">
-                  {project.date}
-                </span>
+                <span className="text-xs text-blue-400 font-mono whitespace-nowrap">{project.date}</span>
               </div>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-blue-200 text-blue-800 px-2 py-1 rounded text-xs font-mono shadow-sm"
-                  >
-                    {tech}
-                  </span>
+                  <span key={tech} className="bg-blue-900 text-blue-200 px-2 py-1 rounded text-xs font-mono shadow-sm">{tech}</span>
                 ))}
               </div>
-              <ul className="list-disc list-inside text-gray-800 mb-2 space-y-1 text-sm md:text-base">
+              <ul className="list-disc list-inside text-blue-200 mb-2 space-y-1 text-sm md:text-base">
                 {project.highlights.map((desc, idx) => (
                   <li key={idx}>{desc}</li>
                 ))}
