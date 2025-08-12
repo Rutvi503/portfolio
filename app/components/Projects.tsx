@@ -45,7 +45,9 @@ export default function Projects() {
   return (
     <section className="py-16 bg-gradient-to-b from-[#181e29] to-[#10141a] text-blue-100">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-blue-300 text-center">Projects</h2>
+        <h2 className="text-3xl font-bold mb-8 text-blue-300 text-center">
+          Projects
+        </h2>
         <div className="grid md:grid-cols-1 gap-10">
           {projects.map((project) => (
             <div
@@ -55,13 +57,22 @@ export default function Projects() {
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl md:text-4xl">{project.icon}</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-blue-100">{project.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-100">
+                    {project.title}
+                  </h3>
                 </div>
-                <span className="text-xs text-blue-400 font-mono whitespace-nowrap">{project.date}</span>
+                <span className="text-xs text-blue-400 font-mono whitespace-nowrap">
+                  {project.date}
+                </span>
               </div>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.tech.map((tech) => (
-                  <span key={tech} className="bg-blue-900 text-blue-200 px-2 py-1 rounded text-xs font-mono shadow-sm">{tech}</span>
+                  <span
+                    key={tech}
+                    className="bg-blue-900 text-blue-200 px-2 py-1 rounded text-xs font-mono shadow-sm"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
               <ul className="list-disc list-inside text-blue-200 mb-2 space-y-1 text-sm md:text-base">
