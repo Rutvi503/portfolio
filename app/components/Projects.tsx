@@ -1,5 +1,30 @@
 const projects = [
   {
+    title: "AI-Powered Document Q&A System",
+    date: "Jun 2025 - Present",
+    tech: ["Python", "LangChain", "FastAPI", "OpenAI"],
+    icon: "🤖",
+    highlights: [
+      "AI-driven question-answering platform for querying millions of documents with near-instant responses.",
+      "Built with Python, LangChain, FastAPI, and OpenAI for advanced NLP and scalable backend.",
+      "Handles large-scale document ingestion and semantic search.",
+      "Impact: Enables users to extract insights and answers from massive document collections efficiently.",
+    ],
+  },
+  {
+    title: "Business Card",
+    date: "Sep 2025 - Oct 2025",
+    tech: ["React", "Next.js", "FastAPI", "PostgreSQL", "Redis", "Docker"],
+    icon: "💼",
+    highlights: [
+      "Full-stack app with React/Next.js frontend and FastAPI backend.",
+      "Features QR code generation, profile management, and real-time contact sharing.",
+      "Comprehensive settings: photo uploads, password management, responsive UI.",
+      "Custom business card themes, QR code scanning, social media integration, secure authentication.",
+      "Impact: Perfect for networking events and professional connections with mobile-first design.",
+    ],
+  },
+  {
     title: "Attendance System Using Face Recognition",
     date: "Dec 2023 - June 2024",
     tech: ["Python", "Django", "FastAPI", "PostgreSQL", "AWS"],
@@ -43,45 +68,138 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-16 bg-gradient-to-b from-[#181e29] to-[#10141a] text-blue-100">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-blue-300 text-center">
-          Projects
-        </h2>
-        <div className="grid md:grid-cols-1 gap-10">
-          {projects.map((project) => (
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-b from-slate-900 to-slate-800"
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Featured Projects
+            </span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
+            A showcase of my recent work and technical achievements
+          </p>
+        </div>
+
+        <div className="grid gap-8">
+          {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-gradient-to-br from-[#232a3a] to-[#181e29] rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:scale-[1.025] transition-transform border border-blue-900"
+              className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl md:text-4xl">{project.icon}</span>
-                  <h3 className="text-xl md:text-2xl font-bold text-blue-100">
-                    {project.title}
-                  </h3>
+              {/* Project Header */}
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-6">
+                <div className="flex items-center gap-4 mb-4 lg:mb-0">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg">
+                    {project.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      {project.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span className="text-sm font-mono">{project.date}</span>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-xs text-blue-400 font-mono whitespace-nowrap">
-                  {project.date}
-                </span>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.slice(0, 4).map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.tech.length > 4 && (
+                    <span className="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm font-medium border border-gray-500/30">
+                      +{project.tech.length - 4} more
+                    </span>
+                  )}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-blue-900 text-blue-200 px-2 py-1 rounded text-xs font-mono shadow-sm"
+
+              {/* Project Highlights */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-blue-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                  Key Features & Impact
+                </h4>
+                <ul className="space-y-3">
+                  {project.highlights.map((highlight, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-3 text-gray-300 leading-relaxed"
+                    >
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-base">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="list-disc list-inside text-blue-200 mb-2 space-y-1 text-sm md:text-base">
-                {project.highlights.map((desc, idx) => (
-                  <li key={idx}>{desc}</li>
-                ))}
-              </ul>
+
+              {/* Hover Effect Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/5 group-hover:to-purple-500/5 rounded-3xl transition-all duration-500"></div>
+
+              {/* Floating Elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-60 float"></div>
+              <div
+                className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-500 rounded-full opacity-60 float"
+                style={{ animationDelay: "2s" }}
+              ></div>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full border border-blue-500/30 text-blue-300 font-medium">
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+              />
+            </svg>
+            <span>More projects available on GitHub</span>
+          </div>
         </div>
       </div>
     </section>
