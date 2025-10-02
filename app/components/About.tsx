@@ -130,7 +130,9 @@ export default function About() {
                     <h3 className="text-xl font-semibold text-white">
                       AI Development
                     </h3>
-                    <p className="text-gray-400">Machine Learning, MCP server , Agentic AI</p>
+                    <p className="text-gray-400">
+                      Machine Learning, MCP server , Agentic AI
+                    </p>
                   </div>
                 </div>
               </div>
