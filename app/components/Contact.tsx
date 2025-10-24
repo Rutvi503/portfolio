@@ -12,11 +12,13 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -27,19 +29,21 @@ export default function Contact() {
 
     try {
       // Create mailto link with form data
-      const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+      const subject = encodeURIComponent(
+        `Portfolio Contact: ${formData.subject}`,
       );
-      
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`,
+      );
+
       const mailtoLink = `mailto:ruturathod53@gmail.com?subject=${subject}&body=${body}`;
-      
+
       // Open email client
       window.location.href = mailtoLink;
-      
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -218,7 +222,8 @@ export default function Contact() {
 
                 {submitStatus === "success" && (
                   <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-xl text-green-400 text-center">
-                    ✅ Your email client will open with the message ready to send!
+                    ✅ Your email client will open with the message ready to
+                    send!
                   </div>
                 )}
 
