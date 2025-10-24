@@ -66,7 +66,7 @@ export default function Hero() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="/RutviRathod_Resume -.pdf"
+              href="/Rutvi_Resume .pdf"
               download
               className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500 hover:shadow-opacity-25 transition-all duration-300 hover:scale-105"
               style={{ boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}
@@ -124,13 +124,6 @@ export default function Hero() {
                 <span>View on GitHub</span>
               </span>
             </a>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white border-opacity-30 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white bg-opacity-50 rounded-full mt-2 animate-pulse"></div>
-            </div>
           </div>
         </div>
       </div>

@@ -254,9 +254,7 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-400">
-            © 2024 Rutvi Rathod. Built with Next.js and Tailwind CSS.
-          </p>
+          <p className="text-gray-400">© 2024 Rutvi Rathod.</p>
         </div>
       </div>
     </section>
