@@ -66,7 +66,7 @@ export default function Hero() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="/Rutvi_Resume .pdf"
+              href="/RutviR_Resume .pdf"
               download
               className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500 hover:shadow-opacity-25 transition-all duration-300 hover:scale-105"
               style={{ boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}

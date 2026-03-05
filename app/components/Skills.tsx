@@ -28,7 +28,7 @@ const skillCategories = [
   {
     title: "Design & AI",
     skills: [
-      { name: "UI/UX Design", level: 85, color: "from-pink-500 to-purple-500" },
+      { name: "LLMs", level: 85, color: "from-pink-500 to-purple-500" },
       { name: "Figma", level: 88, color: "from-purple-500 to-pink-500" },
       { name: "Agentic AI", level: 80, color: "from-indigo-500 to-purple-500" },
       {
