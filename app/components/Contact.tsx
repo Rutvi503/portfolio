@@ -254,7 +254,9 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} Rutvi Rathod.</p>
+          <p className="text-gray-400">
+            © {new Date().getFullYear()} Rutvi Rathod.
+          </p>
         </div>
       </div>
     </section>
